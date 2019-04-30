@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="data/master.png">
+        <title>Mastermind</title>
+        <link rel="stylesheet" href="stylesheets/game.css">
+    </head>
+    <body>
+        <header>
+            <button class="corner-button" id="quit" onclick="quit()">Quit</button>
+            <button class="corner-button" id="fs" onclick="toggleFullscreen()">Toggle</button>
+        </header>
+        <main>
+            <div id="board">
+                <div id="pieces">
+                    <span class="circle" id="r"></span>
+                    <span class="circle" id="g"></span>
+                    <span class="circle" id="b"></span>
+                    <span class="circle" id="y"></span>
+                    <span class="circle" id="o"></span>
+                    <span class="circle" id="p"></span>
+                    <button id="guess" onclick="buttonSound()">Guess</button>
+                </div>
+                <div class="guess-column" id="g1">
+                    <span class="big-circle" id="c1-1"></span>
+                    <span class="big-circle" id="c1-2"></span>
+                    <span class="big-circle" id="c1-3"></span>
+                    <span class="big-circle" id="c1-4"></span>
+                    <div>
+                        <span class="peg" id="p1"></span>
+                    </div>
+                </div>
+                <div class="guess-column" id="g2">
+                    <span class="big-circle" id="c2-1"></span>
+                    <span class="big-circle" id="c2-2"></span>
+                    <span class="big-circle" id="c2-3"></span>
+                    <span class="big-circle" id="c2-4"></span>
+                    <div>
+                        <span class="peg" id="p2"></span>
+                    </div>
+                </div>
+                <div class="guess-column" id="g3">
+                    <span class="big-circle" id="c3-1"></span>
+                    <span class="big-circle" id="c3-2"></span>
+                    <span class="big-circle" id="c3-3"></span>
+                    <span class="big-circle" id="c3-4"></span>
+                    <div>
+                        <span class="peg" id="p3"></span>
+                    </div>
+                </div>
+                <div class="guess-column" id="g4">
+                    <span class="big-circle" id="c4-1"></span>
+                    <span class="big-circle" id="c4-2"></span>
+                    <span class="big-circle" id="c4-3"></span>
+                    <span class="big-circle" id="c4-4"></span>
+                    <div>
+                        <span class="peg" id="p4"></span>
+                    </div>
+                </div>
+                <div class="guess-column" id="g5">
+                    <span class="big-circle" id="c5-1"></span>
+                    <span class="big-circle" id="c5-2"></span>
+                    <span class="big-circle" id="c5-3"></span>
+                    <span class="big-circle" id="c5-4"></span>
+                    <div>
+                        <span class="peg" id="p5"></span>
+                    </div>
+                </div>
+                <div class="guess-column" id="g6">
+                    <span class="big-circle" id="c6-1"></span>
+                    <span class="big-circle" id="c6-2"></span>
+                    <span class="big-circle" id="c6-3"></span>
+                    <span class="big-circle" id="c6-4"></span>
+                    <div>
+                        <span class="peg" id="p6"></span>
+                    </div>        
+                </div>
+                <div class="guess-column" id="g7">
+                    <span class="big-circle" id="c7-1"></span>
+                    <span class="big-circle" id="c7-2"></span>
+                    <span class="big-circle" id="c7-3"></span>
+                    <span class="big-circle" id="c7-4"></span>
+                    <div>
+                        <span class="peg" id="p7"></span>
+                    </div>
+                </div>
+                <div class="guess-column" id="g8">
+                    <span class="big-circle" id="c8-1"></span>
+                    <span class="big-circle" id="c8-2"></span>
+                    <span class="big-circle" id="c8-3"></span>
+                    <span class="big-circle" id="c8-4"></span>
+                    <div>
+                        <span class="peg" id="p8"></span>
+                    </div>
+                </div>
+                <div class ="answer-column">
+                    <span class="ans-circle" id="code-1">?</span>
+                    <span class="ans-circle" id="code-2">?</span>
+                    <span class="ans-circle" id="code-3">?</span>
+                    <span class="ans-circle" id="code-4">?</span>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                <h2 id="player-type"></h2>
+                <br>
+            </div>
+        </main>
+        <script src="javascripts/shared.js"></script>
+        <script src="javascripts/config.js"></script> 
+        <script src="javascripts/statuses.js"></script>
+        <script src="javascripts/messages.js"></script>
+        <script src="javascripts/interactions.js"></script> <!-- browser parses the code from top to bottom, by now the DOM is built -->
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="data/master.png">
+        <title>Mastermind</title>
+        <link rel="stylesheet" href="stylesheets/splash.css">
+    </head>
+    <body>
+        <header>
+            <a onclick="overlayOn('o1')">Credits</a>
+        </header>
+        <main>
+            <div id="middle">
+                <div id="logo">
+                </div>
+                <h1>A two player code breaking game</h1>
+                <form action="/play" method="get">
+                    <button type="submit" class="big-button">Find Match</button>
+                </form>
+                <button class="big-button" onclick="overlayOn('o2')">Rules</button>
+            </div>
+            <div id="bottom-left">
+                <h3>Number of initialized games: <%= gamesInitialized %></h3>
+                <h3>Number of aborted games: <%= gamesAborted %></h3>
+                <h3>Number of completed games: <%= gamesCompleted %></h3>
+                <!-- cookie -->
+                <h3 id="nrVisits"></h3>
+            </div>
+        </main>
+        <div class="overlay" id="o1" onclick="overlayOff('o1')">
+            <div>
+                <p>
+                    Icons made by <a href="https://www.flaticon.com/authors/skyclick" title="Skyclick">Skyclick</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+                </p>
+                <p>
+                    Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+                </p>
+                <br>
+                <h4></h4>
+            </div>
+        </div>
+        <div class="overlay" id="o2" onclick="overlayOff('o2')">
+            <div>
+                <p>
+                    This game adheres to the classic rules of the board game "Mastermind".<br>
+                    It is played in a single round.<br>
+                    Thus, the two players each get assigned one of the roles: codebreaker or codemaker.<br>
+                    If they guess the pattern within at most 8 tries, the codebreaker wins, otherwise the codemaker will be awarded victory.<br>
+                    As a codebreaker, to play, you simply click / tap on the color to the left on the board with which you want to fill the first available ball of your current guess.<br>
+                    Clicking / tapping a ball from your current guess will remove the current color assigned to it.<br>
+                    Finally, the guess button will confirm your current guess and the pegs will be placed accordingly.
+                </p>
+                <br>
+                <h4></h4>
+            </div>
+        </div>
+        <script src="javascripts/shared.js"></script>
+        <script src="javascripts/splash.js"></script>
+        <script src="javascripts/cookie.js"></script>
+    </body>
+</html>

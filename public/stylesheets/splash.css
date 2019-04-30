@@ -1,0 +1,148 @@
+header {
+    width: 100%;
+    display: inline-block;
+}
+
+header a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgray;
+    float: right;
+    padding: 0.05%;
+    cursor: pointer;
+}
+
+header a:active {
+    color: lightgray;
+}
+
+main {
+    text-align: center;
+}
+
+#middle {
+    display: inline-block;
+}
+
+#logo {
+    display: block;
+    height: 22.5vh;
+    margin: 5% auto 2.5%;
+    background: url("../data/logo.svg") no-repeat center;
+    background-size: contain;
+    animation: shake 0.1s;
+    animation-iteration-count: initial;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#logo::before {
+    content: "";
+    background: url("../data/logo-hover.svg");
+}
+
+#logo:hover {
+    background: url("../data/logo-hover.svg") no-repeat center;
+    background-size: contain;
+}
+
+#middle h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: -3%;
+    margin-bottom: 7.5%;
+}
+
+.big-button {
+    margin: 5% auto;
+    display: block;
+    position: static;
+    border-radius: 1.25ch;
+    width: 40%;
+    height: 25%;
+    background-color: black;
+    color: white;
+    border: 0.5em solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.9em;
+    cursor: pointer;
+    transition: border-radius 0.1s;
+}
+
+.big-button:hover {
+    border-radius: 0.25ch;
+}
+
+#bottom-left {
+    float: left;
+    margin-top: 4%;
+    margin-left: 3.5%;
+    position: absolute;
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkslategray;
+}
+
+#bottom-left h3:last-of-type {
+    font-size: 101%;
+    font-style: italic;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.99);
+    z-index: 2;
+    cursor: pointer;
+    overflow: auto !important;
+}
+
+.overlay div {
+    width: 100%;
+    margin-top: 15vh;
+}
+
+
+#o1 p {
+    text-align: center;
+    line-height: 150%;
+}
+
+#o2 p {
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.99);
+    line-height: 150%;
+    padding: 0.75vmin;
+}
+
+.overlay h4 {
+    font-size: 1.25em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay h4::after {
+    content: "Click or tap anywhere to return to the splash screen.";
+}
